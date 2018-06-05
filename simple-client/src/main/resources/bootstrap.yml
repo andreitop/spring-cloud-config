@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: discovery-client
+  cloud:
+    config:
+      uri: http://localhost:8001
+logging:
+  pattern:
+    console: "%d{yy-MM-dd E HH:mm:ss.SSS} %highlight(%-5p) ${PID} --- %clr([%8.15t]){cyan} %highlight(%logger{36}){blue} : %m %n"
+  level:
+    org.springframework.web: INFO
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
