@@ -1,8 +1,14 @@
 spring:
   application:
     name: config-server
-  profiles:
-    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/andreitop/spring-cloud-property-repo.git
+          username: ${github.username}
+          password: ${github.password}
+          cloneOnStart: true
 server:
   port: ${PORT:8001}
 logging:
