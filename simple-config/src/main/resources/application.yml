@@ -4,11 +4,9 @@ spring:
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/andreitop/spring-cloud-property-repo.git
-          username: ${github.username}
-          password: ${github.password}
-          cloneOnStart: true
+        vault:
+          host: 127.0.0.1
+          port: 8200
 server:
   port: ${PORT:8001}
 logging:

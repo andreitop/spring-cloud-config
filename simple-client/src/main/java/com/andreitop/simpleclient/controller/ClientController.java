@@ -16,6 +16,6 @@ public class ClientController {
 
     @GetMapping("/ping")
     public String ping() {
-        return "From " + Arrays.toString(env.getActiveProfiles());
+        return "From vault: " + env.getProperty("epam.app") + " | v=" + env.getProperty("epam.version");
     }
 }
