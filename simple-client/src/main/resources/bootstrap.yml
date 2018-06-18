@@ -4,8 +4,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8001
-      profile: zone1
-      label: update-client
+      label: refresh-client
 logging:
   pattern:
     console: "%d{yy-MM-dd E HH:mm:ss.SSS} %highlight(%-5p) ${PID} --- %clr([%8.15t]){cyan} %highlight(%logger{36}){blue} : %m %n"
